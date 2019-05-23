@@ -26,17 +26,31 @@ class _LoginPageState extends State<LoginPage> {
                    if(input.isEmpty){
                      return 'please type email';}},
                  onSaved: (input) => _email=input,
-                 decoration: (
-                   InputDecoration(labelText: 'email')
-                 ),),
+                decoration: InputDecoration(
+                            labelText: 'Email',
+                            labelStyle: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                 
+                                color: Colors.grey),
+                            focusedBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(color: Colors.orange)),
+                                ),
+                 ),
                  TextFormField(
+                   
                  validator: (input){
                    if(input.isEmpty){
                      return 'please type password';}},
                  onSaved: (input) => _password=input,
-                 decoration: (
-                   InputDecoration(labelText: 'password')
-                 ),
+                 decoration: InputDecoration(
+                            labelText: 'Password',
+                            labelStyle: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.grey),
+                            focusedBorder: UnderlineInputBorder(
+                              borderSide: BorderSide(color: Colors.orange),
+                            
+                            )),
                  obscureText: true,
                 ),
 

@@ -1,5 +1,6 @@
 import 'package:firebase_connection/Pages/Setup/signIn.dart';
 import 'package:firebase_connection/Pages/Setup/signup.dart';
+
 import 'package:flutter/material.dart';
 
 class WelcomePage extends StatefulWidget {
@@ -11,7 +12,10 @@ class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Welcome Screen'),
+      
+      appBar: AppBar(
+        title: Text('Shop App'),
+        backgroundColor: Colors.orangeAccent,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -20,13 +24,15 @@ class _WelcomePageState extends State<WelcomePage> {
          RaisedButton(
                  onPressed: navigateToSignIn,
                   child: Text('Sign in'),
+               
                  
                 ),
                  RaisedButton(
                   onPressed:navigateTOSignUp,
                   child: Text('Sign up'),
                  
-                )
+                ),
+             
       ],),
     );
   }
@@ -38,4 +44,5 @@ class _WelcomePageState extends State<WelcomePage> {
 
  Navigator.push(context, MaterialPageRoute(builder: (context)=>SignUpPage()));
   }
+
 }
